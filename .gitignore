@@ -1,0 +1,38 @@
+# ===============================
+# STM32CubeIDE Workspace
+# ===============================
+.metadata/
+
+# ===============================
+# Archivos de compilación
+# ===============================
+Debug/
+Release/
+
+**/Debug/
+**/Release/
+
+# ===============================
+# Archivos generados por GCC
+# ===============================
+*.o
+*.d
+*.su
+*.cyclo
+*.map
+*.list
+*.elf
+*.hex
+*.bin
+
+# ===============================
+# Archivos temporales
+# ===============================
+*.log
+*.tmp
+
+# ===============================
+# Configuración local del IDE
+# ===============================
+**/.settings/
+.settings/language.settings.xml

@@ -17,6 +17,7 @@ uint8_t current_bit = 0;
 uint8_t matrix_pattern[NUM_MATRICES][NUM_FILAS] = {0};
 SeleccionLED saved_in_data[MAX_SELECTIONS];
 uint8_t in_data_count = 0;
+static SPI_HandleTypeDef *s_hspi;
 
 
 // Functions
@@ -30,6 +31,9 @@ void MAX7219_ClearAll(void);
 void MAX7219_ResetAll(void);
 void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_position);
 
+void MAX7219_init(SPI_HandleTypeDef *hspi) {
+    s_haspi = hspi;
+}
 void MAX7219_CS_Enable(void) {
     HAL_GPIO_WritePin(MAX7219_CS_GPIO_Port, MAX7219_CS_Pin, GPIO_PIN_RESET);
 }
@@ -37,7 +41,7 @@ void MAX7219_CS_Enable(void) {
 void MAX7219_CS_Disable(void) {
     HAL_GPIO_WritePin(MAX7219_CS_GPIO_Port, MAX7219_CS_Pin, GPIO_PIN_SET);
 }
-void MAX7219_Init(int brillo){
+void MAX7219_Init2(int brillo){
     uint8_t config_brightness[NUM_MATRICES * 2];
 
 

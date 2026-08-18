@@ -1,7 +1,7 @@
 Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.o: \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.c \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.h \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.c \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -46,11 +46,11 @@ Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/../Components/is42s32800j/is42s32800j.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/../Components/is42s32800j/is42s32800j.h \
  ../../../CM7/Core/Inc/is42s32800j_conf.h
-F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.h:
-F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sdram.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
@@ -95,6 +95,6 @@ F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:
-F:/trabajo_final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/../Components/is42s32800j/is42s32800j.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/../Components/is42s32800j/is42s32800j.h:
 ../../../CM7/Core/Inc/is42s32800j_conf.h:

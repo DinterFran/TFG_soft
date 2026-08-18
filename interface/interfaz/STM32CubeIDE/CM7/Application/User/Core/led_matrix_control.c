@@ -32,7 +32,7 @@ void MAX7219_ResetAll(void);
 void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_position);
 
 void MAX7219_init(SPI_HandleTypeDef *hspi) {
-    s_haspi = hspi;
+    s_hspi = hspi;
 }
 void MAX7219_CS_Enable(void) {
     HAL_GPIO_WritePin(MAX7219_CS_GPIO_Port, MAX7219_CS_Pin, GPIO_PIN_RESET);

@@ -39,6 +39,7 @@ void MAX7219_CS_Disable(void);
 void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_position);
 void MAX7219_SaveSelection(uint8_t num_mx, uint8_t row, uint8_t column);
 void MAX7219_ShowSelecctions(uint8_t index);
+void MAX7219_Init2(int brillo);
 
 // Varibles externas
 

@@ -28,7 +28,7 @@ void Screen1Presenter::updateBrilloValue(int value){
 			brillo_actual--;
 		}
 	}
-	MAX7219_Init(brillo_actual);
+	MAX7219_Init2(brillo_actual);
 	view.sendBrilloValue(brillo_actual);
 
 }

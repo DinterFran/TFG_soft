@@ -52,23 +52,23 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:134:18:virtual touchgfx::Rect touchgfx::CanvasWidget::getSolidRect() const	0	static
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/grafic_screen/GraficViewBase.hpp:29:18:virtual void GraficViewBase::action1()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<GraficPresenter>::~View()	0	static
-F:/trabajo_final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:164:6:virtual void GraficViewBase::setupScreen()	0	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<GraficViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/Graph.hpp:54:7:touchgfx::Graph<100>::~Graph()	0	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<GraficViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
+C:/Users/frand/Documents/GitHub/Trabajo Final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:164:6:virtual void GraficViewBase::setupScreen()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = GraficViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = GraficViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<GraficPresenter>::~View()	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/Graph.hpp:54:7:virtual touchgfx::Graph<100>::~Graph()	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<GraficViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
-F:/trabajo_final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:159:1:GraficViewBase::~GraficViewBase()	8	static
-F:/trabajo_final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:159:1:virtual GraficViewBase::~GraficViewBase()	8	static
+C:/Users/frand/Documents/GitHub/Trabajo Final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:159:1:GraficViewBase::~GraficViewBase()	8	static
+C:/Users/frand/Documents/GitHub/Trabajo Final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:159:1:virtual GraficViewBase::~GraficViewBase()	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:1176:18:virtual void touchgfx::AbstractDataGraph::invalidateContent() const	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:1779:17:virtual int touchgfx::StaticDataGraph::indexToDataPointYScaled(int16_t) const	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:1763:17:virtual int touchgfx::StaticDataGraph::indexToDataPointXScaled(int16_t) const	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
-F:/trabajo_final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:169:6:void GraficViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+C:/Users/frand/Documents/GitHub/Trabajo Final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:169:6:void GraficViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
@@ -78,4 +78,4 @@ F:/trabajo_final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/gra
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:1282:25:virtual touchgfx::CWRUtil::Q5 touchgfx::AbstractDataGraph::valueToScreenYQ5(int) const	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:1270:25:virtual touchgfx::CWRUtil::Q5 touchgfx::AbstractDataGraph::valueToScreenXQ5(int) const	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:36:5:touchgfx::AbstractPainterRGB888::AbstractPainterRGB888()	16	static
-F:/trabajo_final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:10:1:GraficViewBase::GraficViewBase()	104	static
+C:/Users/frand/Documents/GitHub/Trabajo Final/interface/interfaz/CM7/TouchGFX/generated/gui_generated/src/grafic_screen/GraficViewBase.cpp:10:1:GraficViewBase::GraficViewBase()	80	static

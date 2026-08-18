@@ -1,5 +1,5 @@
 Application/User/Core/stm32h7xx_hal_msp.o: \
- F:/trabajo_final/interface/interfaz/CM7/Core/Src/stm32h7xx_hal_msp.c \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/Core/Src/stm32h7xx_hal_msp.c \
  ../../../CM7/Core/Inc/main.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
@@ -58,7 +58,7 @@ Application/User/Core/stm32h7xx_hal_msp.o: \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h \
  ../../../Drivers/CMSIS/Include/cmsis_compiler.h \
- F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h
 ../../../CM7/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:
@@ -117,4 +117,4 @@ Application/User/Core/stm32h7xx_hal_msp.o: \
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h:
 ../../../Drivers/CMSIS/Include/cmsis_compiler.h:
-F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:

@@ -1,5 +1,5 @@
 Application/User/gui/Screen1Presenter.o: \
- F:/trabajo_final/interface/interfaz/CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -104,7 +104,7 @@ Application/User/gui/Screen1Presenter.o: \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h \
  ../../../Drivers/CMSIS/Include/cmsis_compiler.h \
- F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
@@ -218,7 +218,7 @@ Application/User/gui/Screen1Presenter.o: \
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h:
 ../../../Drivers/CMSIS/Include/cmsis_compiler.h:
-F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:

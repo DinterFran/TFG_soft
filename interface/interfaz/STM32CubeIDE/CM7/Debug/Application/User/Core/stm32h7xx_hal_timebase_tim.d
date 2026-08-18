@@ -1,5 +1,5 @@
 Application/User/Core/stm32h7xx_hal_timebase_tim.o: \
- F:/trabajo_final/interface/interfaz/CM7/Core/Src/stm32h7xx_hal_timebase_tim.c \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/Core/Src/stm32h7xx_hal_timebase_tim.c \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \

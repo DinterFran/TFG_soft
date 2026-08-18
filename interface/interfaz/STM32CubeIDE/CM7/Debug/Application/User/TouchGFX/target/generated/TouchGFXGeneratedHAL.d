@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
- F:/trabajo_final/interface/interfaz/CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
  ../../../CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
@@ -114,7 +114,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h \
  ../../../Drivers/CMSIS/Include/cmsis_compiler.h \
- F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
@@ -298,7 +298,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h:
 ../../../Drivers/CMSIS/Include/cmsis_compiler.h:
-F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:

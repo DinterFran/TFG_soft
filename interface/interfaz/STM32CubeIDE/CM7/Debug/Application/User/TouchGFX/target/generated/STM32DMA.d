@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/STM32DMA.o: \
- F:/trabajo_final/interface/interfaz/CM7/TouchGFX/target/generated/STM32DMA.cpp \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/TouchGFX/target/generated/STM32DMA.cpp \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \

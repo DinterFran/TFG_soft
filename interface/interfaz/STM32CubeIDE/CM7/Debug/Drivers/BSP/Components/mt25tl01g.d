@@ -1,6 +1,6 @@
 Drivers/BSP/Components/mt25tl01g.o: \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/Components/mt25tl01g/mt25tl01g.c \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/Components/mt25tl01g/mt25tl01g.c \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h \
  ../../../CM7/Core/Inc/mt25tl01g_conf.h \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h747xx.h \
@@ -46,7 +46,7 @@ Drivers/BSP/Components/mt25tl01g.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
-F:/trabajo_final/interface/interfaz/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h:
 ../../../CM7/Core/Inc/mt25tl01g_conf.h:
 ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h747xx.h:

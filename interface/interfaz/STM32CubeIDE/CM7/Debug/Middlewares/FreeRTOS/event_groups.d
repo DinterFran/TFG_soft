@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/event_groups.o: \
- F:/trabajo_final/interface/interfaz/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

@@ -1,6 +1,6 @@
 Utilities/jpeg_utils.o: \
- F:/trabajo_final/interface/interfaz/Utilities/JPEG/jpeg_utils.c \
- F:/trabajo_final/interface/interfaz/Utilities/JPEG/jpeg_utils.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Utilities/JPEG/jpeg_utils.c \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Utilities/JPEG/jpeg_utils.h \
  ../../../CM7/Core/Inc/jpeg_utils_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
@@ -46,7 +46,7 @@ Utilities/jpeg_utils.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
-F:/trabajo_final/interface/interfaz/Utilities/JPEG/jpeg_utils.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Utilities/JPEG/jpeg_utils.h:
 ../../../CM7/Core/Inc/jpeg_utils_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:

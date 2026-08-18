@@ -1,6 +1,6 @@
 Drivers/BSP/Components/is42s32800j.o: \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/Components/is42s32800j/is42s32800j.c \
- F:/trabajo_final/interface/interfaz/Drivers/BSP/Components/is42s32800j/is42s32800j.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/Components/is42s32800j/is42s32800j.c \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/Components/is42s32800j/is42s32800j.h \
  ../../../CM7/Core/Inc/is42s32800j_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
@@ -46,7 +46,7 @@ Drivers/BSP/Components/is42s32800j.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
-F:/trabajo_final/interface/interfaz/Drivers/BSP/Components/is42s32800j/is42s32800j.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/Components/is42s32800j/is42s32800j.h:
 ../../../CM7/Core/Inc/is42s32800j_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:

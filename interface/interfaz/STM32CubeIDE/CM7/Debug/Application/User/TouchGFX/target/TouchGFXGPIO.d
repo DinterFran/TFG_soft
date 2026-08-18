@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/TouchGFXGPIO.o: \
- F:/trabajo_final/interface/interfaz/CM7/TouchGFX/target/TouchGFXGPIO.cpp \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/TouchGFX/target/TouchGFXGPIO.cpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h747xx.h \
@@ -45,7 +45,7 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- F:/trabajo_final/interface/interfaz/CM7/TouchGFX/target/../../Core/Inc/main.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/TouchGFX/target/../../Core/Inc/main.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_qspi.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
@@ -59,7 +59,7 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h \
  ../../../Drivers/CMSIS/Include/cmsis_compiler.h \
- F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
  ../../../CM7/Core/Inc/main.h
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
@@ -106,7 +106,7 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-F:/trabajo_final/interface/interfaz/CM7/TouchGFX/target/../../Core/Inc/main.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/TouchGFX/target/../../Core/Inc/main.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_qspi.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:
@@ -120,5 +120,5 @@ F:/trabajo_final/interface/interfaz/CM7/TouchGFX/target/../../Core/Inc/main.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h:
 ../../../Drivers/CMSIS/Include/cmsis_compiler.h:
-F:/trabajo_final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
 ../../../CM7/Core/Inc/main.h:

@@ -74,6 +74,8 @@ extern int32_t DSI_IO_Read(uint16_t ChannelNbr, uint16_t Reg, uint8_t *pData, ui
 #define LCD_RESET_GPIO_Port GPIOG
 #define MCU_ACTIVE_Pin GPIO_PIN_8
 #define MCU_ACTIVE_GPIO_Port GPIOF
+#define CS_MAX_Pin GPIO_PIN_11
+#define CS_MAX_GPIO_Port GPIOJ
 #define FRAME_RATE_Pin GPIO_PIN_9
 #define FRAME_RATE_GPIO_Port GPIOJ
 #define RENDER_TIME_Pin GPIO_PIN_8

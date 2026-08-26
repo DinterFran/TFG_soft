@@ -17,12 +17,13 @@ uint8_t current_bit = 0;
 uint8_t matrix_pattern[NUM_MATRICES][NUM_FILAS] = {0};
 SeleccionLED saved_in_data[MAX_SELECTIONS];
 uint8_t in_data_count = 0;
+static const uint8_t digit_font[10][NUM_FILAS] = MAX7219_DIGIT_FONT;
 static SPI_HandleTypeDef *s_hspi;
 
 
 // Functions
 void MAX7219_SaveSelection(uint8_t num_mx, uint8_t row, uint8_t column);
-void MAX7219_Init(int brillo);
+void MAX7219_Init(SPI_HandleTypeDef *hspi);
 void MAX7219_ShowSelecctions(uint8_t index);
 void MAX7219_Test_Brightness(void);
 void MatrizLedSelect(uint8_t num_mx, uint8_t row, uint8_t column);
@@ -31,8 +32,9 @@ void MAX7219_ClearAll(void);
 void MAX7219_ResetAll(void);
 void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_position);
 
-void MAX7219_init(SPI_HandleTypeDef *hspi) {
+void MAX7219_Init(SPI_HandleTypeDef *hspi) {
     s_hspi = hspi;
+    MAX7219_ClearAll();
 }
 void MAX7219_CS_Enable(void) {
     HAL_GPIO_WritePin(MAX7219_CS_GPIO_Port, MAX7219_CS_Pin, GPIO_PIN_RESET);
@@ -41,20 +43,18 @@ void MAX7219_CS_Enable(void) {
 void MAX7219_CS_Disable(void) {
     HAL_GPIO_WritePin(MAX7219_CS_GPIO_Port, MAX7219_CS_Pin, GPIO_PIN_SET);
 }
-void MAX7219_Init2(int brillo){
+void MAX7219_Set_Brigth(int brillo){
     uint8_t config_brightness[NUM_MATRICES * 2];
-
-
-	for (int i = 0; i < NUM_MATRICES; i++) {
-		config_brightness[i * 2]     = INTENSITY_ADD; // Dirección del registro Shutdown
-		config_brightness[i * 2 + 1] = brillo; // 0x01 = encendido
-	}
-	MAX7219_CS_Enable();
-	HAL_SPI_Transmit(&hspi5, config_brightness, sizeof(config_brightness), 100);
-	MAX7219_CS_Disable();
-	MAX7219_Test_Brightness();
-
+    for (int i = 0; i < NUM_MATRICES; i++) {
+        config_brightness[i * 2]     = INTENSITY_ADD;
+        config_brightness[i * 2 + 1] = brillo;
+    }
+    MAX7219_CS_Enable();
+    HAL_SPI_Transmit(&hspi5, config_brightness, sizeof(config_brightness), 100);
+    MAX7219_CS_Disable();
+    MAX7219_ShowNumber(brillo);
 }
+
 void MAX7219_SaveSelection(uint8_t num_mx, uint8_t row, uint8_t column){
 	if(in_data_count < MAX_SELECTIONS){
 		saved_in_data[in_data_count].n_matrix = num_mx;
@@ -222,6 +222,19 @@ void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_posit
     MAX7219_CS_Disable();
 }
 
-
+void MAX7219_ShowNumber(uint8_t number){
+    if (number > 15) {
+        number = 15; // clamp al rango real de brillo
+    }
+    uint8_t tens  = number / 10;
+    uint8_t units = number % 10;
+    for (uint8_t fila = 0; fila < NUM_FILAS; fila++) {
+        matrix_pattern[MATRIX_TENS_INDEX][fila]  = digit_font[tens][fila];
+        matrix_pattern[MATRIX_UNITS_INDEX][fila] = digit_font[units][fila];
+        matrix_pattern[0][fila] = 0x00;
+        matrix_pattern[3][fila] = 0x00;
+    }
+    MAX7219_UpdateMatrix(matrix_pattern);
+}
 
 

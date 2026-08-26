@@ -6,6 +6,7 @@
  */
 #include "led_matrix_control.h"
 
+
 // TODO: buscar no hacerlas globalas, pasarlas como parametros.
 // TODO: mejorar lo nombres se las funciones para que sean coherentes con lo que hacen
 // Variables globales //
@@ -31,17 +32,19 @@ void MAX7219_UpdateMatrix(uint8_t matrix_update[NUM_MATRICES][NUM_FILAS]);
 void MAX7219_ClearAll(void);
 void MAX7219_ResetAll(void);
 void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_position);
+void MAX7219_Resync(void);
 
 void MAX7219_Init(SPI_HandleTypeDef *hspi) {
     s_hspi = hspi;
+    MAX7219_ResetAll();
     MAX7219_ClearAll();
 }
 void MAX7219_CS_Enable(void) {
-    HAL_GPIO_WritePin(MAX7219_CS_GPIO_Port, MAX7219_CS_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin, GPIO_PIN_RESET);
 }
 
 void MAX7219_CS_Disable(void) {
-    HAL_GPIO_WritePin(MAX7219_CS_GPIO_Port, MAX7219_CS_Pin, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin, GPIO_PIN_SET);
 }
 void MAX7219_Set_Brigth(int brillo){
     uint8_t config_brightness[NUM_MATRICES * 2];
@@ -235,6 +238,14 @@ void MAX7219_ShowNumber(uint8_t number){
         matrix_pattern[3][fila] = 0x00;
     }
     MAX7219_UpdateMatrix(matrix_pattern);
+}
+void MAX7219_Resync(void) {
+    uint8_t nop[2] = {0x00, 0x00};
+    for (int i = 0; i < 4; i++) {
+        MAX7219_CS_Enable();
+        HAL_SPI_Transmit(&hspi5, nop, 2, 100);
+        MAX7219_CS_Disable();
+    }
 }
 
 

@@ -196,6 +196,7 @@ Error_Handler();
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
   MAX7219_Init(&hspi5);
+  //MAX7219_CheckChips(&huart1);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -798,8 +799,10 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : LCD_BL_Pin FRAME_RATE_Pin RENDER_TIME_Pin VSYNC_FREQ_Pin */
-  GPIO_InitStruct.Pin = LCD_BL_Pin|FRAME_RATE_Pin|RENDER_TIME_Pin|VSYNC_FREQ_Pin;
+  /*Configure GPIO pins : LCD_BL_Pin CS_MAX_Pin FRAME_RATE_Pin RENDER_TIME_Pin
+                           VSYNC_FREQ_Pin */
+  GPIO_InitStruct.Pin = LCD_BL_Pin|CS_MAX_Pin|FRAME_RATE_Pin|RENDER_TIME_Pin
+                          |VSYNC_FREQ_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -826,13 +829,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(MCU_ACTIVE_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : CS_MAX_Pin */
-  GPIO_InitStruct.Pin = CS_MAX_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(CS_MAX_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

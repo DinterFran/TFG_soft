@@ -1,6 +1,6 @@
 #include <gui/screen2_screen/Screen2View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
-
+//Pantalla donde se ingresa patron por pantalla tactil
 Screen2Presenter::Screen2Presenter(Screen2View& v)
     : view(v)
 {
@@ -9,6 +9,7 @@ Screen2Presenter::Screen2Presenter(Screen2View& v)
 
 void Screen2Presenter::activate()
 {
+	MAX7219_ClearAll();
 
 }
 

@@ -51,7 +51,9 @@ Drivers/BSP/Components \
 Drivers/BSP/STM32H747I-Discovery \
 Drivers/CMSIS \
 Drivers/STM32H7xx_HAL_Driver \
-Middlewares/FreeRTOS \
+Middlewares/FreeRTOS/Source/CMSIS_RTOS_V2 \
+Middlewares/FreeRTOS/Source \
+Middlewares/FreeRTOS/Source/portable/GCC/ARM_CM4F \
+Middlewares/FreeRTOS/Source/portable/MemMang \
 Middlewares/LibJPEG \
-Utilities \
 

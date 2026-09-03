@@ -38,6 +38,7 @@ extern "C" {
 #include "stm32h747i_discovery_errno.h"
 #include "../Components/otm8009a/otm8009a.h"
 #include "led_matrix_control.h"
+#include "app_m7.h"
 //#include <TouchGFXGeneratedHAL.hpp>
 /* USER CODE END Includes */
 

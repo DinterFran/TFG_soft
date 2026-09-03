@@ -177,7 +177,12 @@ SECTIONS
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
   } >RAM_D1
-
+  .shared_data (NOLOAD) :
+  {
+    . = ALIGN(4);
+    *(.shared_data)
+    . = ALIGN(4);
+  } >RAM_D3
   /* Remove information from the compiler libraries */
   /DISCARD/ :
   {

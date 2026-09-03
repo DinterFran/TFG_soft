@@ -77,6 +77,8 @@ Application/User/TouchGFX/target/TouchGFXHAL.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
  ../../../CM7/Core/Inc/main.h \
@@ -91,6 +93,7 @@ Application/User/TouchGFX/target/TouchGFXHAL.o: \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h \
  ../../../Drivers/CMSIS/Include/cmsis_compiler.h \
  C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/app_m7.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../../CM7/TouchGFX/target/STM32H7Instrumentation.hpp \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
@@ -179,6 +182,8 @@ Application/User/TouchGFX/target/TouchGFXHAL.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:
 ../../../CM7/Core/Inc/main.h:
@@ -193,6 +198,7 @@ Application/User/TouchGFX/target/TouchGFXHAL.o: \
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h:
 ../../../Drivers/CMSIS/Include/cmsis_compiler.h:
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
+C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/app_m7.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../../../CM7/TouchGFX/target/STM32H7Instrumentation.hpp:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:

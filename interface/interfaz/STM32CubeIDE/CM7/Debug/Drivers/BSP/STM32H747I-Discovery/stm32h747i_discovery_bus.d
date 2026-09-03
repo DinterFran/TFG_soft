@@ -46,6 +46,8 @@ Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_bus.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_bus.h:
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h:
@@ -93,4 +95,6 @@ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/ST
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:

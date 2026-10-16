@@ -1,2 +1,0 @@
-C:/Users/frand/Documents/GitHub/Trabajo Final/interface/interfaz/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:37:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	0	static
-C:/Users/frand/Documents/GitHub/Trabajo Final/interface/interfaz/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:42:10:uint16_t BitmapDatabase::getInstanceSize()	0	static

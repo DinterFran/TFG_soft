@@ -8,6 +8,7 @@ C_SRCS += \
 ../Application/User/Core/app_m7.c \
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/Core/Src/freertos.c \
 ../Application/User/Core/led_matrix_control.c \
+../Application/User/Core/log.c \
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/Core/Src/main.c \
 ../Application/User/Core/patterns.c \
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/CM7/Core/Src/stm32h7xx_hal_msp.c \
@@ -20,6 +21,7 @@ C_DEPS += \
 ./Application/User/Core/app_m7.d \
 ./Application/User/Core/freertos.d \
 ./Application/User/Core/led_matrix_control.d \
+./Application/User/Core/log.d \
 ./Application/User/Core/main.d \
 ./Application/User/Core/patterns.d \
 ./Application/User/Core/stm32h7xx_hal_msp.d \
@@ -32,6 +34,7 @@ OBJS += \
 ./Application/User/Core/app_m7.o \
 ./Application/User/Core/freertos.o \
 ./Application/User/Core/led_matrix_control.o \
+./Application/User/Core/log.o \
 ./Application/User/Core/main.o \
 ./Application/User/Core/patterns.o \
 ./Application/User/Core/stm32h7xx_hal_msp.o \
@@ -58,7 +61,7 @@ Application/User/Core/stm32h7xx_it.o: C:/Users/frand/Documents/GitHub/Trabajo\ F
 clean: clean-Application-2f-User-2f-Core
 
 clean-Application-2f-User-2f-Core:
-	-$(RM) ./Application/User/Core/app_m7.cyclo ./Application/User/Core/app_m7.d ./Application/User/Core/app_m7.o ./Application/User/Core/app_m7.su ./Application/User/Core/freertos.cyclo ./Application/User/Core/freertos.d ./Application/User/Core/freertos.o ./Application/User/Core/freertos.su ./Application/User/Core/led_matrix_control.cyclo ./Application/User/Core/led_matrix_control.d ./Application/User/Core/led_matrix_control.o ./Application/User/Core/led_matrix_control.su ./Application/User/Core/main.cyclo ./Application/User/Core/main.d ./Application/User/Core/main.o ./Application/User/Core/main.su ./Application/User/Core/patterns.cyclo ./Application/User/Core/patterns.d ./Application/User/Core/patterns.o ./Application/User/Core/patterns.su ./Application/User/Core/stm32h7xx_hal_msp.cyclo ./Application/User/Core/stm32h7xx_hal_msp.d ./Application/User/Core/stm32h7xx_hal_msp.o ./Application/User/Core/stm32h7xx_hal_msp.su ./Application/User/Core/stm32h7xx_hal_timebase_tim.cyclo ./Application/User/Core/stm32h7xx_hal_timebase_tim.d ./Application/User/Core/stm32h7xx_hal_timebase_tim.o ./Application/User/Core/stm32h7xx_hal_timebase_tim.su ./Application/User/Core/stm32h7xx_it.cyclo ./Application/User/Core/stm32h7xx_it.d ./Application/User/Core/stm32h7xx_it.o ./Application/User/Core/stm32h7xx_it.su ./Application/User/Core/syscalls.cyclo ./Application/User/Core/syscalls.d ./Application/User/Core/syscalls.o ./Application/User/Core/syscalls.su ./Application/User/Core/sysmem.cyclo ./Application/User/Core/sysmem.d ./Application/User/Core/sysmem.o ./Application/User/Core/sysmem.su
+	-$(RM) ./Application/User/Core/app_m7.cyclo ./Application/User/Core/app_m7.d ./Application/User/Core/app_m7.o ./Application/User/Core/app_m7.su ./Application/User/Core/freertos.cyclo ./Application/User/Core/freertos.d ./Application/User/Core/freertos.o ./Application/User/Core/freertos.su ./Application/User/Core/led_matrix_control.cyclo ./Application/User/Core/led_matrix_control.d ./Application/User/Core/led_matrix_control.o ./Application/User/Core/led_matrix_control.su ./Application/User/Core/log.cyclo ./Application/User/Core/log.d ./Application/User/Core/log.o ./Application/User/Core/log.su ./Application/User/Core/main.cyclo ./Application/User/Core/main.d ./Application/User/Core/main.o ./Application/User/Core/main.su ./Application/User/Core/patterns.cyclo ./Application/User/Core/patterns.d ./Application/User/Core/patterns.o ./Application/User/Core/patterns.su ./Application/User/Core/stm32h7xx_hal_msp.cyclo ./Application/User/Core/stm32h7xx_hal_msp.d ./Application/User/Core/stm32h7xx_hal_msp.o ./Application/User/Core/stm32h7xx_hal_msp.su ./Application/User/Core/stm32h7xx_hal_timebase_tim.cyclo ./Application/User/Core/stm32h7xx_hal_timebase_tim.d ./Application/User/Core/stm32h7xx_hal_timebase_tim.o ./Application/User/Core/stm32h7xx_hal_timebase_tim.su ./Application/User/Core/stm32h7xx_it.cyclo ./Application/User/Core/stm32h7xx_it.d ./Application/User/Core/stm32h7xx_it.o ./Application/User/Core/stm32h7xx_it.su ./Application/User/Core/syscalls.cyclo ./Application/User/Core/syscalls.d ./Application/User/Core/syscalls.o ./Application/User/Core/syscalls.su ./Application/User/Core/sysmem.cyclo ./Application/User/Core/sysmem.d ./Application/User/Core/sysmem.o ./Application/User/Core/sysmem.su
 
 .PHONY: clean-Application-2f-User-2f-Core
 

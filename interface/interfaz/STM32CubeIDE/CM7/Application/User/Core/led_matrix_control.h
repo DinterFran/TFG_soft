@@ -56,7 +56,7 @@ void MAX7219_SaveSelection(uint8_t num_mx, uint8_t row, uint8_t column);
 void MAX7219_ShowSelecctions(uint8_t index);
 void MAX7219_Set_Brigth(int brillo);
 void MAX7219_ShowNumber(uint8_t number);
-
+void MAX7219_ClearSelections(void);
 // Varibles externas
 
 extern uint8_t current_matrix;

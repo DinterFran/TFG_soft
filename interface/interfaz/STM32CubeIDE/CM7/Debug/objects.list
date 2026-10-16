@@ -1,6 +1,7 @@
 "./Application/User/Core/app_m7.o"
 "./Application/User/Core/freertos.o"
 "./Application/User/Core/led_matrix_control.o"
+"./Application/User/Core/log.o"
 "./Application/User/Core/main.o"
 "./Application/User/Core/patterns.o"
 "./Application/User/Core/stm32h7xx_hal_msp.o"

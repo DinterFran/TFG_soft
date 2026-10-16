@@ -62,7 +62,19 @@ Application/User/Core/led_matrix_control.o: \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/otm8009a/otm8009a_reg.h \
  ../../../Drivers/CMSIS/Include/cmsis_compiler.h \
  C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h \
- C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/app_m7.h
+ C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/app_m7.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../../../CM7/Core/Inc/FreeRTOSConfig.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 ../Application/User/Core/led_matrix_control.h:
 ../../../CM7/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
@@ -126,3 +138,15 @@ Application/User/Core/led_matrix_control.o: \
 ../../../Drivers/CMSIS/Include/cmsis_compiler.h:
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/led_matrix_control.h:
 C:/Users/frand/Documents/GitHub/Trabajo\ Final/interface/interfaz/STM32CubeIDE/CM7/Application/User/Core/app_m7.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+../../../CM7/Core/Inc/FreeRTOSConfig.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:

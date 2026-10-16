@@ -3,8 +3,15 @@
  *
  *  Created on: Jul 21, 2025
  *      Author: Franco Dinter
+ *
+ *  Sesion 1: todo acceso a SPI5 pasa por max_tx(), protegido con un mutex.
+ *  Asi la tarea de TouchGFX y la LEDTask no se pisan en el bus.
+ *  Antes de que arranque el scheduler el mutex no se usa (no hace falta).
  */
 #include "led_matrix_control.h"
+#include "FreeRTOS.h"
+#include "semphr.h"
+#include "task.h"
 
 
 // TODO: buscar no hacerlas globalas, pasarlas como parametros.
@@ -20,6 +27,7 @@ SeleccionLED saved_in_data[MAX_SELECTIONS];
 uint8_t in_data_count = 0;
 static const uint8_t digit_font[10][NUM_FILAS] = MAX7219_DIGIT_FONT;
 static SPI_HandleTypeDef *s_hspi;
+static SemaphoreHandle_t s_spi_mutex = NULL;
 
 
 // Functions
@@ -34,8 +42,41 @@ void MAX7219_ResetAll(void);
 void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_position);
 void MAX7219_Resync(void);
 
+/* ---------- Acceso exclusivo al bus SPI5 ---------- */
+
+static int max_rtos_running(void)
+{
+    return (s_spi_mutex != NULL) &&
+           (xTaskGetSchedulerState() == taskSCHEDULER_RUNNING);
+}
+
+static void max_lock(void)
+{
+    if (max_rtos_running()) { xSemaphoreTake(s_spi_mutex, portMAX_DELAY); }
+}
+
+static void max_unlock(void)
+{
+    if (max_rtos_running()) { xSemaphoreGive(s_spi_mutex); }
+}
+
+/* Una transaccion completa: CS bajo -> transmitir -> CS alto */
+static void max_tx(uint8_t *buf, uint16_t len, uint32_t timeout)
+{
+    max_lock();
+    MAX7219_CS_Enable();
+    HAL_SPI_Transmit(&hspi5, buf, len, timeout);
+    MAX7219_CS_Disable();
+    max_unlock();
+}
+
+/* -------------------------------------------------- */
+
 void MAX7219_Init(SPI_HandleTypeDef *hspi) {
     s_hspi = hspi;
+    if (s_spi_mutex == NULL) {
+        s_spi_mutex = xSemaphoreCreateMutex();
+    }
     MAX7219_ResetAll();
     MAX7219_ClearAll();
 }
@@ -52,9 +93,7 @@ void MAX7219_Set_Brigth(int brillo){
         config_brightness[i * 2]     = INTENSITY_ADD;
         config_brightness[i * 2 + 1] = brillo;
     }
-    MAX7219_CS_Enable();
-    HAL_SPI_Transmit(&hspi5, config_brightness, sizeof(config_brightness), 100);
-    MAX7219_CS_Disable();
+    max_tx(config_brightness, sizeof(config_brightness), 100);
     MAX7219_ShowNumber(brillo);
 }
 
@@ -66,6 +105,12 @@ void MAX7219_SaveSelection(uint8_t num_mx, uint8_t row, uint8_t column){
 		in_data_count++;
 	}
 }
+
+/* Sesion 1: borra el patron cargado (lo usa el boton "Borrar" de Screen2) */
+void MAX7219_ClearSelections(void){
+	in_data_count = 0;
+}
+
 void MAX7219_ShowSelecctions(uint8_t index){
 
 	MatrizLedSelect(saved_in_data[index].n_matrix,
@@ -81,9 +126,7 @@ void MAX7219_Test_Brightness(void){
 		pattern[i * 2]     = 0x04; // fila del medio
 		pattern[i * 2 + 1] = 0xFF; // todos los leds
 	}
-	MAX7219_CS_Enable();
-	HAL_SPI_Transmit(&hspi5, pattern, sizeof(pattern), 100);
-	MAX7219_CS_Disable();
+	max_tx(pattern, sizeof(pattern), 100);
 }
 
 
@@ -148,9 +191,7 @@ void MAX7219_UpdateMatrix(uint8_t matrix_update[NUM_MATRICES][NUM_FILAS]){
         	spi_packet[posicion_spi] = fila;
         	spi_packet[posicion_spi + 1] = matrix_pattern[matriz][fila-1];
         }
-		MAX7219_CS_Enable();
-		HAL_SPI_Transmit(&hspi5, spi_packet, sizeof(spi_packet), 100);
-		MAX7219_CS_Disable();
+		max_tx(spi_packet, sizeof(spi_packet), 100);
 	}
 }
 
@@ -166,9 +207,7 @@ void MAX7219_ClearAll(void) {
             tx[i * 2]     = fila;
             tx[i * 2 + 1] = 0x00;
         }
-        MAX7219_CS_Enable();
-        HAL_SPI_Transmit(&hspi5, tx, sizeof(tx), 500);
-        MAX7219_CS_Disable();
+        max_tx(tx, sizeof(tx), 500);
     }
 }
 
@@ -186,11 +225,15 @@ HAL_StatusTypeDef MAX7219_SendToAll(uint8_t address, uint8_t data, uint8_t pos) 
         }
     }
 
+    /* Se usa solo en el arranque (antes del scheduler). Se dejan los
+     * HAL_Delay originales para no cambiar el comportamiento hoy. */
+    max_lock();
     MAX7219_CS_Enable();
     HAL_Delay(100);
     HAL_StatusTypeDef ret = HAL_SPI_Transmit(&hspi5, tx, NUM_MATRICES * 2, 100);
     HAL_Delay(100);
     MAX7219_CS_Disable();
+    max_unlock();
 
     return ret;
 }
@@ -220,9 +263,7 @@ void MAX7219_LightSingleLed(uint8_t matrix_index, uint8_t row, uint8_t bit_posit
         }
     }
 
-    MAX7219_CS_Enable();
-    HAL_SPI_Transmit(&hspi5, tx, sizeof(tx), 100);
-    MAX7219_CS_Disable();
+    max_tx(tx, sizeof(tx), 100);
 }
 
 void MAX7219_ShowNumber(uint8_t number){
@@ -242,10 +283,6 @@ void MAX7219_ShowNumber(uint8_t number){
 void MAX7219_Resync(void) {
     uint8_t nop[2] = {0x00, 0x00};
     for (int i = 0; i < 4; i++) {
-        MAX7219_CS_Enable();
-        HAL_SPI_Transmit(&hspi5, nop, 2, 100);
-        MAX7219_CS_Disable();
+        max_tx(nop, 2, 100);
     }
 }
-
-

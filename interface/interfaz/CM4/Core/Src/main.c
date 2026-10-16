@@ -113,7 +113,6 @@ int main(void)
   MX_MDMA_Init();
   /* USER CODE BEGIN 2 */
   App_M4_Init();
-  App_M4_CreateTask();
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -141,6 +140,7 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  App_M4_CreateTask();
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */

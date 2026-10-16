@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "log.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -199,9 +199,9 @@ Error_Handler();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
+  Log_Init(&huart1);
   MAX7219_Init(&hspi5);
-  App_M7_Init(&huart1);
-  App_M7_CreateTask();
+  App_M7_Init();
   //MAX7219_CheckChips(&huart1);
   /* USER CODE END 2 */
 
@@ -232,6 +232,8 @@ Error_Handler();
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
+  Log_CreateTask();
+  App_M7_CreateTask();
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 

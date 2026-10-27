@@ -35,4 +35,5 @@ Release/
 # Configuración local del IDE
 # ===============================
 **/.settings/
-.settings/language.settings.xmlDebug/
+.settings/language.settings.xml
+Debug/

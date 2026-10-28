@@ -5,10 +5,16 @@
  *      Author: Franco Dinter
  *
  *  Sesion 1: todo acceso a SPI5 pasa por max_tx(), protegido con un mutex.
- *  Asi la tarea de TouchGFX y la LEDTask no se pisan en el bus.
- *  Antes de que arranque el scheduler el mutex no se usa (no hace falta).
+ *  Sesion 2: el mutex ahora es del BUS (spi5_bus.c) y lo comparten el
+ *  MAX7219 y los Arduinos. CS_MAX paso de PJ11 (D12) a PK1 (D10).
+ *
+ *  OJO: el MAX7219 (a diferencia del MAX7221) mete bits en su registro
+ *  aunque LOAD/CS este alto, asi que el trafico hacia los Arduinos le
+ *  ensucia el shift register. No pasa nada porque cada max_tx() manda la
+ *  cadena COMPLETA (4 x 2 bytes) antes de subir LOAD: siempre mandar 8 bytes.
  */
 #include "led_matrix_control.h"
+#include "spi5_bus.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
 #include "task.h"
@@ -27,7 +33,6 @@ SeleccionLED saved_in_data[MAX_SELECTIONS];
 uint8_t in_data_count = 0;
 static const uint8_t digit_font[10][NUM_FILAS] = MAX7219_DIGIT_FONT;
 static SPI_HandleTypeDef *s_hspi;
-static SemaphoreHandle_t s_spi_mutex = NULL;
 
 
 // Functions
@@ -44,21 +49,8 @@ void MAX7219_Resync(void);
 
 /* ---------- Acceso exclusivo al bus SPI5 ---------- */
 
-static int max_rtos_running(void)
-{
-    return (s_spi_mutex != NULL) &&
-           (xTaskGetSchedulerState() == taskSCHEDULER_RUNNING);
-}
-
-static void max_lock(void)
-{
-    if (max_rtos_running()) { xSemaphoreTake(s_spi_mutex, portMAX_DELAY); }
-}
-
-static void max_unlock(void)
-{
-    if (max_rtos_running()) { xSemaphoreGive(s_spi_mutex); }
-}
+static void max_lock(void)   { SPI5_Bus_Lock();   }
+static void max_unlock(void) { SPI5_Bus_Unlock(); }
 
 /* Una transaccion completa: CS bajo -> transmitir -> CS alto */
 static void max_tx(uint8_t *buf, uint16_t len, uint32_t timeout)
@@ -74,18 +66,16 @@ static void max_tx(uint8_t *buf, uint16_t len, uint32_t timeout)
 
 void MAX7219_Init(SPI_HandleTypeDef *hspi) {
     s_hspi = hspi;
-    if (s_spi_mutex == NULL) {
-        s_spi_mutex = xSemaphoreCreateMutex();
-    }
+    SPI5_Bus_Init();   /* crea el mutex del bus (idempotente) */
     MAX7219_ResetAll();
     MAX7219_ClearAll();
 }
 void MAX7219_CS_Enable(void) {
-    HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin, GPIO_PIN_RESET);
+    SPI5_Bus_Select(SPI5_DEV_MAX7219);
 }
 
 void MAX7219_CS_Disable(void) {
-    HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin, GPIO_PIN_SET);
+    SPI5_Bus_Deselect(SPI5_DEV_MAX7219);
 }
 void MAX7219_Set_Brigth(int brillo){
     uint8_t config_brightness[NUM_MATRICES * 2];

@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "log.h"
+#include "acq_test.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -234,6 +235,7 @@ Error_Handler();
   /* USER CODE BEGIN RTOS_THREADS */
   Log_CreateTask();
   App_M7_CreateTask();
+  Acq_Test_CreateTask();   /* S2: prueba del bus SPI5 con los Arduinos */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
@@ -673,12 +675,12 @@ static void MX_SPI5_Init(void)
   /* SPI5 parameter configuration*/
   hspi5.Instance = SPI5;
   hspi5.Init.Mode = SPI_MODE_MASTER;
-  hspi5.Init.Direction = SPI_DIRECTION_2LINES_TXONLY;
+  hspi5.Init.Direction = SPI_DIRECTION_2LINES;
   hspi5.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi5.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi5.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi5.Init.NSS = SPI_NSS_SOFT;
-  hspi5.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+  hspi5.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
   hspi5.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi5.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi5.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -689,9 +691,9 @@ static void MX_SPI5_Init(void)
   hspi5.Init.TxCRCInitializationPattern = SPI_CRC_INITIALIZATION_ALL_ZERO_PATTERN;
   hspi5.Init.RxCRCInitializationPattern = SPI_CRC_INITIALIZATION_ALL_ZERO_PATTERN;
   hspi5.Init.MasterSSIdleness = SPI_MASTER_SS_IDLENESS_00CYCLE;
-  hspi5.Init.MasterInterDataIdleness = SPI_MASTER_INTERDATA_IDLENESS_00CYCLE;
+  hspi5.Init.MasterInterDataIdleness = SPI_MASTER_INTERDATA_IDLENESS_15CYCLE;
   hspi5.Init.MasterReceiverAutoSusp = SPI_MASTER_RX_AUTOSUSP_DISABLE;
-  hspi5.Init.MasterKeepIOState = SPI_MASTER_KEEP_IO_STATE_DISABLE;
+  hspi5.Init.MasterKeepIOState = SPI_MASTER_KEEP_IO_STATE_ENABLE;
   hspi5.Init.IOSwap = SPI_IO_SWAP_DISABLE;
   if (HAL_SPI_Init(&hspi5) != HAL_OK)
   {
@@ -850,15 +852,16 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(MCU_ACTIVE_GPIO_Port, MCU_ACTIVE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOJ, CS_Micro1_Pin|CS_Micro2_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : LCD_BL_Pin CS_MAX_Pin FRAME_RATE_Pin RENDER_TIME_Pin
-                           VSYNC_FREQ_Pin */
-  GPIO_InitStruct.Pin = LCD_BL_Pin|CS_MAX_Pin|FRAME_RATE_Pin|RENDER_TIME_Pin
-                          |VSYNC_FREQ_Pin;
+  /*Configure GPIO pins : LCD_BL_Pin FRAME_RATE_Pin RENDER_TIME_Pin VSYNC_FREQ_Pin */
+  GPIO_InitStruct.Pin = LCD_BL_Pin|FRAME_RATE_Pin|RENDER_TIME_Pin|VSYNC_FREQ_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -879,12 +882,26 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(LCD_RESET_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : CS_MAX_Pin */
+  GPIO_InitStruct.Pin = CS_MAX_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(CS_MAX_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : MCU_ACTIVE_Pin */
   GPIO_InitStruct.Pin = MCU_ACTIVE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(MCU_ACTIVE_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : CS_Micro1_Pin CS_Micro2_Pin */
+  GPIO_InitStruct.Pin = CS_Micro1_Pin|CS_Micro2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
